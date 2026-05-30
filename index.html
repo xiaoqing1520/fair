@@ -1,299 +1,317 @@
-contract-address {
-    font-family: monospace;
-    font-size: 0.875rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.copy-btn {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 1.25rem;
-    transition: transform 0.2s;
-}
-
-.copy-btn:hover {
-    transform: scale(1.2);
-}
-
-.status-active {
-    color: #10b981;
-}
-
-.progress-bar {
-    width: 100%;
-    height: 30px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
-    overflow: hidden;
-    margin-top: 0.5rem;
-}
-
-.progress-fill {
-    height: 100%;
-    background: var(--gradient-gold);
-    transition: width 1s ease;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    padding-right: 1rem;
-    color: white;
-    font-weight: 700;
-}
-
-/* 路线图 */
-.roadmap {
-    padding: 100px 0;
-}
-
-.roadmap-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.roadmap-card {
-    background: var(--card-bg);
-    padding: 2.5rem;
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    position: relative;
-    transition: all 0.3s;
-}
-
-.roadmap-card:hover {
-    transform: translateY(-10px);
-    border-color: var(--primary-color);
-    box-shadow: 0 20px 40px rgba(245, 158, 11, 0.2);
-}
-
-.roadmap-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.roadmap-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.75rem;
-}
-
-.roadmap-card p {
-    color: var(--text-secondary);
-    margin-bottom: 1rem;
-}
-
-.status-badge {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.875rem;
-    font-weight: 600;
-}
-
-.coming-soon {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
-}
-
-.planned {
-    background: rgba(255, 255, 255, 0.1);
-    color: var(--text-secondary);
-}
-
-/* MINT 区域 */
-.mint-section {
-    padding: 100px 0;
-    background: linear-gradient(180deg, transparent 0%, rgba(30, 41, 59, 0.5) 100%);
-}
-
-.mint-card {
-    background: var(--card-bg);
-    padding: 3rem;
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
-}
-
-.mint-info h3 {
-    font-size: 1.75rem;
-    margin-bottom: 1.5rem;
-    color: var(--primary-color);
-}
-
-.mint-steps {
-    list-style: none;
-    counter-reset: step-counter;
-}
-
-.mint-steps li {
-    counter-increment: step-counter;
-    margin-bottom: 1.5rem;
-    padding-left: 3rem;
-    position: relative;
-    color: var(--text-secondary);
-}
-
-.mint-steps li::before {
-    content: counter(step-counter);
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 2rem;
-    height: 2rem;
-    background: var(--gradient-gold);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: 700;
-}
-
-.mint-action {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-}
-
-.mint-price {
-    text-align: center;
-}
-
-.price-label {
-    display: block;
-    color: var(--text-secondary);
-    margin-bottom: 0.5rem;
-}
-
-.price-value {
-    font-size: 3rem;
-    font-weight: 900;
-    background: var(--gradient-gold);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.btn-mint {
-    width: 100%;
-    padding: 1.5rem 3rem;
-    font-size: 1.5rem;
-    background: var(--gradient-gold);
-    color: white;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.btn-mint:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(245, 158, 11, 0.4);
-}
-
-.mint-note {
-    text-align: center;
-    color: var(--text-secondary);
-    font-size: 0.875rem;
-}
-
-/* 页脚 */
-.footer {
-    background: var(--card-bg);
-    padding: 4rem 0 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.footer-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 3rem;
-    margin-bottom: 3rem;
-}
-
-.footer-section h4 {
-    margin-bottom: 1rem;
-    color: var(--primary-color);
-}
-
-.footer-section p {
-    color: var(--text-secondary);
-    font-size: 0.875rem;
-}
-
-.footer-section a {
-    display: block;
-    color: var(--text-secondary);
-    text-decoration: none;
-    margin-bottom: 0.5rem;
-    transition: color 0.3s;
-}
-
-.footer-section a:hover {
-    color: var(--primary-color);
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    color: var(--text-secondary);
-}
-
-/* 通知 */
-.notification {
-    position: fixed;
-    top: 100px;
-    right: 20px;
-    background: var(--card-bg);
-    padding: 1rem 1.5rem;
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    transform: translateX(400px);
-    transition: transform 0.3s;
-    z-index: 2000;
-}
-
-.notification.show {
-    transform: translateX(0);
-}
-
-/* 响应式设计 */
-@media (max-width: 768px) {
-    .hero .container {
-        grid-template-columns: 1fr;
-    }
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FIGN 公平点火台 - 代币发射启动平台</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
     
-    .hero-title {
-        font-size: 2.5rem;
-    }
-    
-    .nav-links {
-        display: none;
-    }
-    
-    .mechanism-grid,
-    .features-grid,
-    .roadmap-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .mint-card {
-        grid-template-columns: 1fr;
-    }
-    
-    .info-grid {
-        grid-template-columns: 1fr;
-    }
-    
-    .hero-stats {
-        grid-template-columns: 1fr;
-    }
-}
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">🚀</span>
+                <span class="logo-text">FIGN 公平点火台</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home">首页</a>
+                <a href="#features">功能</a>
+                <a href="#roadmap">路线图</a>
+                <a href="#mint">参与MINT</a>
+            </div>
+            <button class="connect-wallet" id="connectWallet">连接钱包</button>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="highlight">FIGN</span> 公平点火
+                    <br>代币发射启动！
+                </h1>
+                <p class="hero-subtitle">
+                    公平 · 透明 · 逻辑清晰，开启 WEB3 新征程！
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToMint()">
+                        立即参与 MINT
+                    </button>
+                    <button class="btn btn-secondary" onclick="showWhitepaper()">
+                        查看白皮书
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">200</div>
+                        <div class="stat-label">流动性池子上限</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">4 BNB</div>
+                        <div class="stat-label">启动资金</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">0.02 BNB</div>
+                        <div class="stat-label">MINT 价格</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="rocket-container">
+                    <div class="rocket">🚀</div>
+                    <div class="coin">
+                        <span class="coin-text">FIGN</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mint-mechanism">
+        <div class="container">
+            <h2 class="section-title">公平 MINT · 一键参与</h2>
+            <div class="mechanism-grid">
+                <div class="mechanism-card">
+                    <div class="mechanism-icon">📝</div>
+                    <h3>创建合约地址</h3>
+                    <p>公平公示</p>
+                </div>
+                <div class="mechanism-card">
+                    <div class="mechanism-icon">💰</div>
+                    <h3>用户往合约地址打入</h3>
+                    <p class="highlight-text">0.02 BNB</p>
+                </div>
+                <div class="mechanism-card">
+                    <div class="mechanism-icon">🎁</div>
+                    <h3>自动获得 FIGN 代币</h3>
+                    <p>即时到账</p>
+                </div>
+                <div class="mechanism-card">
+                    <div class="mechanism-icon">👥</div>
+                    <h3>全程链上公开</h3>
+                    <p>人人可参与</p>
+                </div>
+            </div>
+            
+            <div class="fund-distribution">
+                <h3>资金自动分配</h3>
+                <div class="distribution-chart">
+                    <div class="chart-item">
+                        <div class="chart-bar" style="width: 50%; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <span>50%</span>
+                        </div>
+                        <div class="chart-label">
+                            <span>💧 自动加池</span>
+                            <span>流动性池</span>
+                        </div>
+                    </div>
+                    <div class="chart-item">
+                        <div class="chart-bar" style="width: 50%; background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                            <span>50%</span>
+                        </div>
+                        <div class="chart-label">
+                            <span>🎁 用于 MINT</span>
+                            <span>用户奖励</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">核心优势</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>公平透明</h3>
+                    <p>智能合约执行，公开可查</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🤖</div>
+                    <h3>自动化机制</h3>
+                    <p>自动分配，自动加池</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👥</div>
+                    <h3>人人可参与</h3>
+                    <p>公开 Mint，零门槛参与</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>链上公开</h3>
+                    <p>安全透明，人人可验证</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>即时到账</h3>
+                    <p>打入即获得，无需等待</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💎</div>
+                    <h3>价值共建</h3>
+                    <p>社区驱动，共同成长</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contract-info">
+        <div class="container">
+            <div class="info-grid">
+                <div class="info-card">
+                    <h3>合约信息</h3>
+                    <div class="info-item">
+                        <span class="info-label">合约地址：</span>
+                        <span class="info-value contract-address">
+                            0x742d35Cc6634C0532925a3b844Bc9e7595f0bEb8
+                            <button class="copy-btn" onclick="copyContract()">📋</button>
+                        </span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">网络：</span>
+                        <span class="info-value">BNB Smart Chain</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">状态：</span>
+                        <span class="info-value status-active">● 进行中</span>
+                    </div>
+                </div>
+                
+                <div class="info-card">
+                    <h3>实时数据</h3>
+                    <div class="info-item">
+                        <span class="info-label">已参与：</span>
+                        <span class="info-value" id="participants">127 / 200</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">已筹集：</span>
+                        <span class="info-value" id="raised">2.54 BNB / 4 BNB</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">进度：</span>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress" style="width: 63.5%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="roadmap" id="roadmap">
+        <div class="container">
+            <h2 class="section-title">未来生态规划</h2>
+            <div class="roadmap-grid">
+                <div class="roadmap-card">
+                    <div class="roadmap-icon">🎨</div>
+                    <h3>NFT 生态系统</h3>
+                    <p>即将推出 NFT 发行、交易、质押全链路功能</p>
+                    <span class="status-badge coming-soon">即将推出</span>
+                </div>
+                <div class="roadmap-card">
+                    <div class="roadmap-icon">⚽</div>
+                    <h3>足球预测小游戏</h3>
+                    <p>趣味链上游戏，打通社区互动新玩法</p>
+                    <span class="status-badge coming-soon">即将推出</span>
+                </div>
+                <div class="roadmap-card">
+                    <div class="roadmap-icon">🎮</div>
+                    <h3>GameFi 平台</h3>
+                    <p>边玩边赚，打造 Web3 游戏生态</p>
+                    <span class="status-badge planned">规划中</span>
+                </div>
+                <div class="roadmap-card">
+                    <div class="roadmap-icon">🏦</div>
+                    <h3>DeFi 聚合器</h3>
+                    <p>一站式 DeFi 服务，质押、借贷、流动性挖矿</p>
+                    <span class="status-badge planned">规划中</span>
+                </div>
+                <div class="roadmap-card">
+                    <div class="roadmap-icon">🌐</div>
+                    <h3>跨链桥</h3>
+                    <p>支持多链资产互通，打破生态壁垒</p>
+                    <span class="status-badge planned">规划中</span>
+                </div>
+                <div class="roadmap-card">
+                    <div class="roadmap-icon">🤝</div>
+                    <h3>DAO 治理</h3>
+                    <p>社区自治，持币者共同决策项目未来</p>
+                    <span class="status-badge planned">规划中</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="mint-section" id="mint">
+        <div class="container">
+            <h2 class="section-title">参与 MINT</h2>
+            <div class="mint-card">
+                <div class="mint-info">
+                    <h3>如何参与？</h3>
+                    <ol class="mint-steps">
+                        <li>连接你的 Web3 钱包（MetaMask / Trust Wallet）</li>
+                        <li>确保钱包中有至少 0.02 BNB + Gas 费</li>
+                        <li>点击下方"立即 MINT"按钮</li>
+                        <li>确认交易，等待区块确认</li>
+                        <li>自动获得 FIGN 代币！</li>
+                    </ol>
+                </div>
+                <div class="mint-action">
+                    <div class="mint-price">
+                        <span class="price-label">MINT 价格</span>
+                        <span class="price-value">0.02 BNB</span>
+                    </div>
+                    <button class="btn btn-mint" id="mintButton">
+                        🚀 立即 MINT
+                    </button>
+                    <p class="mint-note">
+                        * 功能即将开放，敬请期待
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>关于 FIGN</h4>
+                    <p>公平点火台致力于打造最透明、最公平的代币发射平台</p>
+                </div>
+                <div class="footer-section">
+                    <h4>快速链接</h4>
+                    <a href="#home">首页</a>
+                    <a href="#features">功能</a>
+                    <a href="#roadmap">路线图</a>
+                    <a href="#mint">参与MINT</a>
+                </div>
+                <div class="footer-section">
+                    <h4>社区</h4>
+                    <a href="#" onclick="showComingSoon()">Twitter</a>
+                    <a href="#" onclick="showComingSoon()">Telegram</a>
+                    <a href="#" onclick="showComingSoon()">Discord</a>
+                    <a href="#" onclick="showComingSoon()">Medium</a>
+                </div>
+                <div class="footer-section">
+                    <h4>联系我们</h4>
+                    <a href="#" onclick="showComingSoon()">support@fign.io</a>
+                    <a href="#" onclick="showComingSoon()">合作咨询</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 FIGN 公平点火台. 逻辑清晰 · 公平点火 · 价值共建</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="notification" id="notification"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
